@@ -31,6 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
     bool grounded;
     bool hasShot = false;
     float finalAngle;
+    Vector2 aimDirection;
     void Awake()
     {
         inputActionAsset = GetComponent<PlayerInput>().actions;
@@ -122,6 +123,7 @@ public class PlayerBehaviour : MonoBehaviour
     public void OnAim(InputAction.CallbackContext context)
     {
         aimInput = context.ReadValue<Vector2>();
+        aimDirection = aimInput;
     }
     public void OnAimCanceled(InputAction.CallbackContext context)
     { aimInput = new Vector2(0f, 0f); }
@@ -143,11 +145,15 @@ public class PlayerBehaviour : MonoBehaviour
 
 
         //Targeting
-        Vector2 aimDirection;
+        
         //Vector2 screenPos = aimInput;
         //Vector2 worldPos = mainCamera.ScreenToWorldPoint(screenPos);
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        aimDirection = (worldPos - (Vector2)gunTip.position).normalized;
+        if ((Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame)
+        || (Mouse.current != null && Mouse.current.delta.ReadValue() != Vector2.zero))
+        {
+            Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            aimDirection = (worldPos - (Vector2)transform.position).normalized;
+        }
 
         //Debug.Log(worldPos);
 
