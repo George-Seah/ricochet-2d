@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     CanvasScript canvas;
     GameObject[] targets;
     Scene currentScene;
+    int currentSceneIndex;
 
     void Awake()
     {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
 
         // —– initialize —–
         currentScene = SceneManager.GetActiveScene();
+        currentSceneIndex = currentScene.buildIndex;
         targets = GameObject.FindGameObjectsWithTag("Target");
         inputActionAsset = FindFirstObjectByType<PlayerInput>().actions;
         
@@ -34,14 +36,16 @@ public class GameManager : MonoBehaviour
     void GetActiveScene()
     {
         currentScene = SceneManager.GetActiveScene();
+        currentSceneIndex = currentScene.buildIndex;
     }
     public void GetTargetCount()
     {
         targets = null;
         targets = GameObject.FindGameObjectsWithTag("Target");
+        GetActiveScene();
         if (targets.Length <= 0)
         {
-            SceneManager.LoadScene(currentScene.buildIndex + 1, LoadSceneMode.Single);
+            SceneManager.LoadScene(currentSceneIndex + 1, LoadSceneMode.Single);
         }
     }
 
@@ -50,7 +54,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Should be restarting.");
         GetActiveScene();
         yield return new WaitForSeconds(restartCountdown);
-        SceneManager.LoadScene(currentScene.buildIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(currentSceneIndex, LoadSceneMode.Single);
     }
     public void StartRestartCountdown()
     {

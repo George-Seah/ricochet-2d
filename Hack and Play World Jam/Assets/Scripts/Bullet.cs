@@ -54,7 +54,7 @@ public class Bullet : MonoBehaviour
 
             bulletDurability--;
             UpdateBounceText();
-            if (bulletDurability <= 0)
+            if (bulletDurability <= 0 && GameObject.FindGameObjectsWithTag("Target").Length > 0)
             {
                 GameManager.Instance.StartRestartCountdown();
                 Destroy(gameObject);
