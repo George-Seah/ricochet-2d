@@ -373,7 +373,7 @@ Rigidbody2D:
   m_LinearDamping: 0.25
   m_AngularDamping: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 6200000, guid: bbfb97198def52742b33188f0369e2a7, type: 2}
+  m_Material: {fileID: 6200000, guid: e05ad5ef6420bb74895540c39541e700, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -394,7 +394,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: bbfb97198def52742b33188f0369e2a7, type: 2}
+  m_Material: {fileID: 6200000, guid: e05ad5ef6420bb74895540c39541e700, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1915,7 +1915,7 @@ GameObject:
   - component: {fileID: 1410054959}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2705,7 +2705,7 @@ CompositeCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 71b3f317f11f5e248899b83e473d8d17, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2830,7 +2830,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 71b3f317f11f5e248899b83e473d8d17, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -117,9 +117,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: bbfb97198def52742b33188f0369e2a7, type: 2}
   m_IncludeLayers:
@@ -142,7 +142,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bbfb97198def52742b33188f0369e2a7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -177,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.2, y: 0.76}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.02
 --- !u!114 &8197815587588804743
 MonoBehaviour:
   m_ObjectHideFlags: 0
