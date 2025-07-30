@@ -5,6 +5,7 @@ using System.Linq;
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
+    [SerializeField] float jumpTime = .3f;
     [SerializeField] float initialJumpForce;
     float jumpForce;
     [SerializeField] float normalGravityScale;
@@ -109,6 +110,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         jumpPressed = false;
         jumpForce = 0;
+        jumpTime = 0;
         rb.gravityScale = fallingGravityScale;
     }
 
@@ -166,9 +168,11 @@ public class PlayerBehaviour : MonoBehaviour
         Debug.Log(facingRight);
         gunSprite.flipY = !facingRight;
         //Jumping
-        if (jumpPressed && grounded)
+        if (jumpPressed && grounded && jumpTime > 0)
         {
             jumpForce = initialJumpForce;
+            jumpTime -= Time.fixedDeltaTime;
+
             Debug.Log("OnJump function activating gravity.");
             if (rb.linearVelocityY <= 0 && !grounded)
             {
@@ -201,15 +205,21 @@ public class PlayerBehaviour : MonoBehaviour
         hasShot = true;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void HandleTriggerEnterStay(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("World Changer")) return;
+        //if (other.gameObject.layer == LayerMask.NameToLayer("World Changer") || other.gameObject.CompareTag("Target")) return;
+        if (!other.gameObject.CompareTag("Ground")) return;
         grounded = true;
         rb.gravityScale = normalGravityScale;
+        jumpTime = .3f;
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        HandleTriggerEnterStay(other);
     }
     void OnTriggerStay2D(Collider2D other)
     { 
-        rb.gravityScale = normalGravityScale;
+        HandleTriggerEnterStay(other);
     }
     void OnTriggerExit2D(Collider2D other)
     {

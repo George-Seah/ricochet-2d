@@ -4,6 +4,7 @@ using System.Linq;
 public class WorldScript : MonoBehaviour
 {
     public bool world1;
+    [HideInInspector]
     public SpriteRenderer spriteRenderer;
     Vector2 triggerDirectionVector;
     string enterDirection;
