@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
         currentSceneIndex = currentScene.buildIndex;
         targets = GameObject.FindGameObjectsWithTag("Target");
         inputActionAsset = FindFirstObjectByType<PlayerInput>().actions;
-        
     }
 
     void GetActiveScene()
@@ -45,7 +44,11 @@ public class GameManager : MonoBehaviour
         GetActiveScene();
         if (targets.Length <= 0)
         {
-            SceneManager.LoadScene(currentSceneIndex + 1, LoadSceneMode.Single);
+            if (currentSceneIndex + 1 < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(currentSceneIndex + 1, LoadSceneMode.Single);
+            }
+            else SceneManager.LoadScene(0, LoadSceneMode.Single);
         }
     }
 
