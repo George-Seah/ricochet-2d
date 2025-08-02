@@ -33,6 +33,8 @@ public class PlayerBehaviour : MonoBehaviour
     bool hasShot = false;
     float finalAngle;
     Vector2 aimDirection;
+    bool gunTipTouchingGround;
+
     void Awake()
     {
         inputActionAsset = GetComponent<PlayerInput>().actions;
@@ -140,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
         //Targeting
-        
+
         //Vector2 screenPos = aimInput;
         //Vector2 worldPos = mainCamera.ScreenToWorldPoint(screenPos);
         if ((Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame)
@@ -172,20 +174,22 @@ public class PlayerBehaviour : MonoBehaviour
             jumpTime -= Time.fixedDeltaTime;
             jumpForce *= .9f;
             rb.linearVelocityY += jumpForce;
-            
+
         }
-        else if (!grounded && (jumpTime <= 0 || rb.linearVelocityY <= 0)) {
+        else if (!grounded && (jumpTime <= 0 || rb.linearVelocityY <= 0))
+        {
             rb.gravityScale = fallingGravityScale;
         }
 
+        //hit = Physics2D.Raycast(gunTip.position, Vector2.right, 1, 1);
+        //Debug.DrawRay(gunTip.position, transform.right, Color.green, 1);
 
         //Shooting
-        if (shootPressed) ShootBullet();
+        if (shootPressed && !hasShot && !gunTipTouchingGround) ShootBullet();
     }
 
     void ShootBullet()
     {
-        if (hasShot) return;
         Bullet newBullet = Instantiate(bullet, gunTip.position, Quaternion.Euler(0f, 0f, finalAngle - 90f)).GetComponent<Bullet>();
         newBullet.bulletDurability = maxBulletBounces;
 
@@ -211,11 +215,15 @@ public class PlayerBehaviour : MonoBehaviour
         HandleTriggerEnterStay(other);
     }
     void OnTriggerStay2D(Collider2D other)
-    { 
+    {
         HandleTriggerEnterStay(other);
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Ground")) grounded = false;
+    }
+    public void SetGunTipTouchingGround(bool value)
+    {
+        gunTipTouchingGround = value;
     }
 }
