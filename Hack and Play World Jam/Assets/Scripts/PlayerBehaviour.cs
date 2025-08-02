@@ -4,6 +4,8 @@ using System.Linq;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    bool jumpPressed;
+    bool grounded;
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpTime = .3f;
     [SerializeField] float initialJumpForce;
@@ -25,11 +27,9 @@ public class PlayerBehaviour : MonoBehaviour
     InputAction pause;
 
     Vector2 moveInput;
-    bool jumpPressed;
     bool shootPressed;
     Vector2 aimInput;
     Camera mainCamera;
-    bool grounded;
     bool hasShot = false;
     float finalAngle;
     Vector2 aimDirection;
@@ -47,13 +47,6 @@ public class PlayerBehaviour : MonoBehaviour
         pause = inputActionAsset.FindAction("Pause");
 
         mainCamera = Camera.main;
-    }
-
-    void Start()
-    {
-        GameObject.FindGameObjectsWithTag("Target")
-            .ToList()
-            .ForEach(target => Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(), GetComponent<Collider2D>()));
     }
 
     void OnEnable()
@@ -168,23 +161,23 @@ public class PlayerBehaviour : MonoBehaviour
         Debug.Log(facingRight);
         gunSprite.flipY = !facingRight;
         //Jumping
-        if (jumpPressed && grounded && jumpTime > 0)
+        if (jumpPressed && grounded)
         {
             jumpForce = initialJumpForce;
-            jumpTime -= Time.fixedDeltaTime;
 
             Debug.Log("OnJump function activating gravity.");
-            if (rb.linearVelocityY <= 0 && !grounded)
-            {
-                rb.gravityScale = fallingGravityScale;
-            }
-            else
-            {
-                rb.gravityScale = normalGravityScale;
-            }
         }
-        jumpForce *= .9f;
-        rb.linearVelocityY += jumpForce;
+        if (jumpPressed && jumpTime > 0)
+        {
+            jumpTime -= Time.fixedDeltaTime;
+            jumpForce *= .9f;
+            rb.linearVelocityY += jumpForce;
+            
+        }
+        else if (!grounded && (jumpTime <= 0 || rb.linearVelocityY <= 0)) {
+            rb.gravityScale = fallingGravityScale;
+        }
+
 
         //Shooting
         if (shootPressed) ShootBullet();
@@ -223,6 +216,6 @@ public class PlayerBehaviour : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        grounded = false;
+        if (other.gameObject.CompareTag("Ground")) grounded = false;
     }
 }
