@@ -11,6 +11,7 @@
 		<type fullname="WorldScript" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.2D.Animation.Runtime">
+		<type fullname="UnityEngine.U2D.Animation.BufferManager" preserve="nothing"/>
 		<type fullname="UnityEngine.U2D.Animation.DeformationManager" preserve="nothing"/>
 		<type fullname="UnityEngine.U2D.Animation.DeformationManagerUpdater" preserve="nothing"/>
 	</assembly>
@@ -50,6 +51,7 @@
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPersistentCanvas" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerProgressBar" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerRenderingLayerField" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerRow" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerToggle" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerToggleHistory" preserve="nothing"/>

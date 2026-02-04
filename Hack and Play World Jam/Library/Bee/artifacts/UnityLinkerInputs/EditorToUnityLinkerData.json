@@ -807,6 +807,13 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.Core.Runtime.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.UI.DebugUIHandlerRenderingLayerField",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.Core.Runtime.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.UI.DebugUIHandlerRow",
             "moduleName": "",
             "usedInScenes": []
@@ -1206,6 +1213,13 @@
                 "Assets/Scenes/Level 3.unity",
                 "Assets/Scenes/Level 4.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.U2D.Animation.BufferManager",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",
@@ -3996,10 +4010,6 @@
     "forceIncludeModules": [],
     "forceExcludeModules": [
         "AMD",
-        "AR",
-        "ClusterInput",
-        "ClusterRenderer",
-        "NVIDIA",
-        "VirtualTexturing"
+        "NVIDIA"
     ]
 }

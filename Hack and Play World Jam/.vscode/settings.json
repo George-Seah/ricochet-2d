@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Hack and Play World Jam.sln"
+    "dotnet.defaultSolution": "Hack and Play World Jam.slnx"
 }

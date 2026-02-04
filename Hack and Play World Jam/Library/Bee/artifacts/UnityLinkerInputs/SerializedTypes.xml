@@ -63,6 +63,8 @@
 		<type fullname="UnityEngine.Rendering.Universal.PostProcessData/TextureResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.Renderer2DResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.RenderGraphSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionDynamicResources" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusionPersistentResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.ScriptableRendererData/DebugShaderResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.ScriptableRendererData/ProbeVolumeResources" preserve="nothing" serialized="true"/>
@@ -71,6 +73,7 @@
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRendererResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset/TextureResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineDebugShaders" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorAssets" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorMaterials" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorShaders" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeShaders" preserve="nothing" serialized="true"/>

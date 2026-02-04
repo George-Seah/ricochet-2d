@@ -75,3 +75,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Hack and Play World Jam/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a
 Hack and Play World Jam/Library/Bee/artifacts/WebGL/GameAssembly/release_WebGL_wasm/GameAssembly.a
+Hack and Play World Jam/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/libburst-llvm-19.dylib
