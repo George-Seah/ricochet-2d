@@ -896,6 +896,17 @@
             "icon": null
           },
           {
+            "name": "CapsuleCollider2D",
+            "scenes": [
+              "Assets/Scenes/Level 1.unity",
+              "Assets/Scenes/Level 2.unity",
+              "Assets/Scenes/Level 3.unity",
+              "Assets/Scenes/Level 4.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "CircleCollider2D",
             "scenes": [
               "Assets/Scenes/Level 1.unity",

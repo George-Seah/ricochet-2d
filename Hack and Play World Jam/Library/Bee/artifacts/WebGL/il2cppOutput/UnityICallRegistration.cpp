@@ -5214,10 +5214,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rigidbody2D_MoveRotation_Angle_Injected();
 		Register_UnityEngine_Rigidbody2D_MoveRotation_Angle_Injected();
 
-		//System.Void UnityEngine.Rigidbody2D::set_collisionDetectionMode_Injected(System.IntPtr,UnityEngine.CollisionDetectionMode2D)
-		void Register_UnityEngine_Rigidbody2D_set_collisionDetectionMode_Injected();
-		Register_UnityEngine_Rigidbody2D_set_collisionDetectionMode_Injected();
-
 		//System.Void UnityEngine.Rigidbody2D::set_gravityScale_Injected(System.IntPtr,System.Single)
 		void Register_UnityEngine_Rigidbody2D_set_gravityScale_Injected();
 		Register_UnityEngine_Rigidbody2D_set_gravityScale_Injected();
@@ -5277,6 +5273,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.SceneManagement.SceneManager
 
 	//Start Registrations for type : UnityEngine.SceneManagement.SceneManagerAPIInternal
+
+		//System.Int32 UnityEngine.SceneManagement.SceneManagerAPIInternal::GetNumScenesInBuildSettings()
+		void Register_UnityEngine_SceneManagement_SceneManagerAPIInternal_GetNumScenesInBuildSettings();
+		Register_UnityEngine_SceneManagement_SceneManagerAPIInternal_GetNumScenesInBuildSettings();
 
 		//System.IntPtr UnityEngine.SceneManagement.SceneManagerAPIInternal::LoadSceneAsyncNameIndexInternal_Injected(UnityEngine.Bindings.ManagedSpanWrapper&,System.Int32,UnityEngine.SceneManagement.LoadSceneParameters&,System.Boolean)
 		void Register_UnityEngine_SceneManagement_SceneManagerAPIInternal_LoadSceneAsyncNameIndexInternal_Injected();
@@ -6357,6 +6357,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Time::get_deltaTime()
 		void Register_UnityEngine_Time_get_deltaTime();
 		Register_UnityEngine_Time_get_deltaTime();
+
+		//System.Single UnityEngine.Time::get_fixedDeltaTime()
+		void Register_UnityEngine_Time_get_fixedDeltaTime();
+		Register_UnityEngine_Time_get_fixedDeltaTime();
 
 		//System.Single UnityEngine.Time::get_fixedUnscaledTime()
 		void Register_UnityEngine_Time_get_fixedUnscaledTime();

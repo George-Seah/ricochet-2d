@@ -329,7 +329,9 @@
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CanvasScript.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GunTip.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
+"Assets/Scripts/Target.cs"
 "Assets/Scripts/WorldChanger.cs"
 "Assets/Scripts/WorldScript.cs"
 -langversion:9.0

@@ -1170,7 +1170,6 @@ UnityEngine.ResourcesAPIInternal::Load_Injected
 UnityEngine.ResourcesAPIInternal::FindObjectsOfTypeAll
 UnityEngine.Rigidbody2D::get_linearVelocityY_Injected
 UnityEngine.Rigidbody2D::MoveRotation_Angle_Injected
-UnityEngine.Rigidbody2D::set_collisionDetectionMode_Injected
 UnityEngine.Rigidbody2D::set_gravityScale_Injected
 UnityEngine.Rigidbody2D::set_linearVelocityY_Injected
 UnityEngine.Rigidbody2D::set_linearVelocity_Injected
@@ -1182,6 +1181,7 @@ UnityEngine.SceneManagement.Scene::GetGUIDInternal_Injected
 UnityEngine.SceneManagement.SceneManager::get_sceneCount
 UnityEngine.SceneManagement.SceneManager::GetActiveScene_Injected
 UnityEngine.SceneManagement.SceneManager::GetSceneAt_Injected
+UnityEngine.SceneManagement.SceneManagerAPIInternal::GetNumScenesInBuildSettings
 UnityEngine.SceneManagement.SceneManagerAPIInternal::LoadSceneAsyncNameIndexInternal_Injected
 UnityEngine.Screen::get_fullScreen
 UnityEngine.Screen::GetMSAASamples
@@ -1423,6 +1423,7 @@ UnityEngine.Tilemaps.TilemapRenderer::OnSpriteAtlasRegistered_Injected
 UnityEngine.Time::get_frameCount
 UnityEngine.Time::get_renderedFrameCount
 UnityEngine.Time::get_deltaTime
+UnityEngine.Time::get_fixedDeltaTime
 UnityEngine.Time::get_fixedUnscaledTime
 UnityEngine.Time::get_realtimeSinceStartup
 UnityEngine.Time::get_smoothDeltaTime

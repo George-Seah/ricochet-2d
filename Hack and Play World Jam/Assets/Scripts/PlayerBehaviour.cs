@@ -6,7 +6,11 @@ public class PlayerBehaviour : MonoBehaviour
 {
     bool jumpPressed;
     bool grounded;
-    [SerializeField] float moveSpeed;
+    public float moveSpeed;
+    public float MoveSpeed {
+    get => moveSpeed;
+    set => moveSpeed = value;
+    }
     [SerializeField] float jumpTime = .3f;
     [SerializeField] float initialJumpForce;
     float jumpForce;

@@ -4,12 +4,13 @@
 		<type fullname="Bullet" preserve="nothing"/>
 		<type fullname="CanvasScript" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
+		<type fullname="GunTip" preserve="nothing"/>
 		<type fullname="PlayerBehaviour" preserve="nothing"/>
+		<type fullname="Target" preserve="nothing"/>
 		<type fullname="WorldChanger" preserve="nothing"/>
 		<type fullname="WorldScript" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.2D.Animation.Runtime">
-		<type fullname="UnityEngine.U2D.Animation.BufferManager" preserve="nothing"/>
 		<type fullname="UnityEngine.U2D.Animation.DeformationManager" preserve="nothing"/>
 		<type fullname="UnityEngine.U2D.Animation.DeformationManagerUpdater" preserve="nothing"/>
 	</assembly>
@@ -114,6 +115,7 @@
 		<type fullname="UnityEngine.Camera" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.CapsuleCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.CircleCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>

@@ -319,10 +319,6 @@ struct Collision2D_t81E83212C969FDDE2AB84EBCA31502818EEAB85B_marshaled_com
 	ContactPoint2D_t16A7EE2DDFB4FA3A09C6554E11F30CEDAEBFA801* ___m_ReusedContacts;
 	ContactPoint2D_t16A7EE2DDFB4FA3A09C6554E11F30CEDAEBFA801* ___m_LegacyContacts;
 };
-struct CollisionDetectionMode2D_t479ECE6D840C67AE9D847D284D8298AF442A6515 
-{
-	int32_t ___value__;
-};
 struct ContactFilter2D_t54A8515C326BF7DA16E5DE97EA7D3CD9B2F77F14 
 {
 	bool ___useTriggers;
@@ -591,6 +587,9 @@ struct Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52  : public Behaviour_
 {
 };
 struct BoxCollider2D_tF860C7737FFB062CEC06577E0CD8364EEC1D4EDA  : public Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52
+{
+};
+struct CapsuleCollider2D_tBC93B7F1D1569FF805567D2D4C17438E95F927EE  : public Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52
 {
 };
 struct CircleCollider2D_t5D665D58EACA966EA4033BCF0EE91E198552E786  : public Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52
@@ -1011,7 +1010,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_linearVelocity_Injected_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Rigidbody2D_get_linearVelocityY_Injected_m883A8EEDB40832D1A4CB6FFAF5FF9E0BA31CD82C (intptr_t ___0__unity_self, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_linearVelocityY_Injected_mCCCD30CD67D6199912B42B05C84B000428E1778F (intptr_t ___0__unity_self, float ___1_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_gravityScale_Injected_m14369A05DAF19BEB1944D0CB8B6DD80CEDC67437 (intptr_t ___0__unity_self, float ___1_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_collisionDetectionMode_Injected_m2B678547ED75A09B15AA6C0AA22185FD193A3B50 (intptr_t ___0__unity_self, int32_t ___1_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Collider2D_get_attachedRigidbody_Injected_m334B725BE20CCAAB8ADA90A44E51738A392DD791 (intptr_t ___0__unity_self, const RuntimeMethod* method) ;
 inline Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* Unmarshal_UnmarshalUnityObject_TisRigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F_m6DCC2C4311C6B3B128248EA012D28F3A8CAAEA50_inline (intptr_t ___0_gcHandlePtr, const RuntimeMethod* method)
 {
@@ -2518,14 +2516,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Physics2D_GetRayIntersectionAll_Internal
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhysicsShape2D_get_shapeType_mBA55638729252854535E3E9279F7A006B610B01F (PhysicsShape2D_t443155710C4DE7DE8C48EADA86BC4DC7EA70226E* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -3799,41 +3789,6 @@ IL_000f:
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_collisionDetectionMode_m87EC5B73B166FFA59434D7418643ADCBAD33C609 (Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* __this, int32_t ___0_value, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MarshalledUnityObject_MarshalNotNull_TisRigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F_mF75744C9E4F665F5AB594D683BADEEC3D47BC2BF_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	intptr_t G_B2_0;
-	memset((&G_B2_0), 0, sizeof(G_B2_0));
-	intptr_t G_B1_0;
-	memset((&G_B1_0), 0, sizeof(G_B1_0));
-	{
-		intptr_t L_0;
-		L_0 = MarshalledUnityObject_MarshalNotNull_TisRigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F_mF75744C9E4F665F5AB594D683BADEEC3D47BC2BF_inline(__this, MarshalledUnityObject_MarshalNotNull_TisRigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F_mF75744C9E4F665F5AB594D683BADEEC3D47BC2BF_RuntimeMethod_var);
-		intptr_t L_1 = L_0;
-		if (L_1)
-		{
-			G_B2_0 = L_1;
-			goto IL_000f;
-		}
-		G_B1_0 = L_1;
-	}
-	{
-		ThrowHelper_ThrowNullReferenceException_mA9C7629D32240EE0218631933DAC647668CA63CF(__this, NULL);
-		G_B2_0 = G_B1_0;
-	}
-
-IL_000f:
-	{
-		int32_t L_2 = ___0_value;
-		Rigidbody2D_set_collisionDetectionMode_Injected_m2B678547ED75A09B15AA6C0AA22185FD193A3B50(G_B2_0, L_2, NULL);
-		return;
-	}
-}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_MoveRotation_Angle_Injected_m32CB177EB1BEA082E3AAFDC40C43EDA1C8BA9E3F (intptr_t ___0__unity_self, float ___1_angle, const RuntimeMethod* method) 
 {
 	typedef void (*Rigidbody2D_MoveRotation_Angle_Injected_m32CB177EB1BEA082E3AAFDC40C43EDA1C8BA9E3F_ftn) (intptr_t, float);
@@ -3873,14 +3828,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_gravityScale_Injected_m1
 	static Rigidbody2D_set_gravityScale_Injected_m14369A05DAF19BEB1944D0CB8B6DD80CEDC67437_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Rigidbody2D_set_gravityScale_Injected_m14369A05DAF19BEB1944D0CB8B6DD80CEDC67437_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody2D::set_gravityScale_Injected(System.IntPtr,System.Single)");
-	_il2cpp_icall_func(___0__unity_self, ___1_value);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody2D_set_collisionDetectionMode_Injected_m2B678547ED75A09B15AA6C0AA22185FD193A3B50 (intptr_t ___0__unity_self, int32_t ___1_value, const RuntimeMethod* method) 
-{
-	typedef void (*Rigidbody2D_set_collisionDetectionMode_Injected_m2B678547ED75A09B15AA6C0AA22185FD193A3B50_ftn) (intptr_t, int32_t);
-	static Rigidbody2D_set_collisionDetectionMode_Injected_m2B678547ED75A09B15AA6C0AA22185FD193A3B50_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Rigidbody2D_set_collisionDetectionMode_Injected_m2B678547ED75A09B15AA6C0AA22185FD193A3B50_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody2D::set_collisionDetectionMode_Injected(System.IntPtr,UnityEngine.CollisionDetectionMode2D)");
 	_il2cpp_icall_func(___0__unity_self, ___1_value);
 }
 #ifdef __clang__
@@ -4232,6 +4179,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider2D_GetShapeBounds_Injected_m7B5D
 	_il2cpp_icall_func = (Collider2D_GetShapeBounds_Injected_m7B5D62A2EC01D7B4709B787520E1476FFAC34C60_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Collider2D::GetShapeBounds_Injected(System.IntPtr,UnityEngine.Bindings.BlittableListWrapper&,System.Boolean,System.Boolean,UnityEngine.Bounds&)");
 	_il2cpp_icall_func(___0__unity_self, ___1_bounds, ___2_useRadii, ___3_useWorldSpace, ___4_ret);
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

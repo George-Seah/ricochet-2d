@@ -75,6 +75,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GunTip",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "LevelGameManager",
             "fullManagedTypeName": "",
@@ -164,6 +171,13 @@
             "nativeClass": "StreamingManager",
             "fullManagedTypeName": "",
             "moduleName": "Streaming",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Target",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -346,6 +360,18 @@
             "nativeClass": "CanvasRenderer",
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
+            "usedInScenes": [
+                "Assets/Scenes/Level 1.unity",
+                "Assets/Scenes/Level 2.unity",
+                "Assets/Scenes/Level 3.unity",
+                "Assets/Scenes/Level 4.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "CapsuleCollider2D",
+            "fullManagedTypeName": "UnityEngine.CapsuleCollider2D",
+            "moduleName": "Physics2D",
             "usedInScenes": [
                 "Assets/Scenes/Level 1.unity",
                 "Assets/Scenes/Level 2.unity",
@@ -1180,13 +1206,6 @@
                 "Assets/Scenes/Level 3.unity",
                 "Assets/Scenes/Level 4.unity"
             ]
-        },
-        {
-            "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.U2D.Animation.BufferManager",
-            "moduleName": "",
-            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",
